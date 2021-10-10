@@ -25,9 +25,9 @@ public class FoodMenuPhoto {
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="MENU_PHOTO_ID")
 	private Long menuPhotoId;
-	
+
 	@ManyToOne
-	@JoinColumn(name="menuId", referencedColumnName = "MENU_ID")
+	@JoinColumn(name="MENU_ID")
 	private FoodMenu foodMenu;
 	
 	@Column(name="MAIN_DVN")
@@ -43,6 +43,7 @@ public class FoodMenuPhoto {
 	
 	@Column(name="REG_USER")
 	private String regUser;
+	
 	@Column(name="REG_DTTM")
 	private LocalDateTime regDttm;
 }

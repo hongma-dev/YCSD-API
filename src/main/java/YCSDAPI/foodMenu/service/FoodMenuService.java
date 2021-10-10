@@ -1,6 +1,7 @@
 package YCSDAPI.foodMenu.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import YCSDAPI.foodMenu.model.FoodMenu;
 
@@ -8,5 +9,5 @@ public interface FoodMenuService {
 
 	List<FoodMenu> getFoodMenus (  ) ;
 	
-	FoodMenu findFoodMenu ( Long menuId );
+	Optional<FoodMenu> findFoodMenu ( Long menuId );
 }

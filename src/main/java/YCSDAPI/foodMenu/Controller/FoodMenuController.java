@@ -1,6 +1,7 @@
 package YCSDAPI.foodMenu.Controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,16 +19,15 @@ public class FoodMenuController {
 	
 	@GetMapping(path="/getFoodMenus")
 	public List<FoodMenu> getFoodMenus () {
-		
 		return foodMenuService.getFoodMenus();
 	}
 	
-//	@GetMapping(path="/findFoodMenu/{id}")
-//	public FoodMenu findFoodMenu ( @PathVariable Long id ) {
-//		
-//		FoodMenu findFoodMenu = foodMenuService.findFoodMenu(id);
-//		
-//		return findFoodMenu;
-//	}
+	@GetMapping(path="/findFoodMenu/{id}")
+	public Optional<FoodMenu> findFoodMenu ( @PathVariable Long id ) {
+		
+		Optional<FoodMenu> findFoodMenu = foodMenuService.findFoodMenu(id);
+		
+		return findFoodMenu;
+	}
 
 }

@@ -36,15 +36,18 @@ public class FoodMenu {
 	@Column(name="MENU_PRICE")
 	private int menuPrice;
 	
-	@OneToMany(mappedBy = "foodMenu")
+	@OneToMany(mappedBy="foodMenu")
 	private List<FoodMenuPhoto> foodMenuPhotos = new ArrayList<FoodMenuPhoto>();
 	
 	@Column(name="REG_USER")
 	private String regUser;
+	
 	@Column(name="REG_DTTM")
 	private LocalDateTime regDttm;
+	
 	@Column(name="UPDT_USER")
 	private String updtUser;
+	
 	@Column(name="UPDT_DTTM")
 	private LocalDateTime updtDttm;
 	
