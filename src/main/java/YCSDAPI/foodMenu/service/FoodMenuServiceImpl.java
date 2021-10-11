@@ -28,4 +28,10 @@ public class FoodMenuServiceImpl implements FoodMenuService{
 	}
 
 	
+	@Override
+	public void saveFoodMenu(FoodMenu foodMenu) {
+		foodMenuRepository.save(foodMenu);
+	}
+
+	
 }

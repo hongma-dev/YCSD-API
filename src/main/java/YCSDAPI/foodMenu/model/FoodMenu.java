@@ -12,6 +12,9 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -43,12 +46,14 @@ public class FoodMenu {
 	private String regUser;
 	
 	@Column(name="REG_DTTM")
+	@CreationTimestamp
 	private LocalDateTime regDttm;
 	
 	@Column(name="UPDT_USER")
 	private String updtUser;
 	
 	@Column(name="UPDT_DTTM")
+	@UpdateTimestamp
 	private LocalDateTime updtDttm;
 	
 	

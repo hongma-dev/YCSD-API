@@ -10,4 +10,6 @@ public interface FoodMenuService {
 	List<FoodMenu> getFoodMenus (  ) ;
 	
 	Optional<FoodMenu> findFoodMenu ( Long menuId );
+	
+	void saveFoodMenu ( FoodMenu foodMenu );
 }
