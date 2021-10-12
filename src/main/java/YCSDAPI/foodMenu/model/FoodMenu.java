@@ -15,12 +15,10 @@ import javax.persistence.Table;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
 @Entity
 @Table(name="YCSD_FOOD_MENU" , schema="YCSD")
@@ -42,10 +40,10 @@ public class FoodMenu {
 	@OneToMany(mappedBy="foodMenu")
 	private List<FoodMenuPhoto> foodMenuPhotos = new ArrayList<FoodMenuPhoto>();
 	
-	@Column(name="REG_USER")
+	@Column(name="REG_USER", updatable = false)
 	private String regUser;
 	
-	@Column(name="REG_DTTM")
+	@Column(name="REG_DTTM", updatable = false)
 	@CreationTimestamp
 	private LocalDateTime regDttm;
 	

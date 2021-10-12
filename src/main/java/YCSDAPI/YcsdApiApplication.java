@@ -9,5 +9,5 @@ public class YcsdApiApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(YcsdApiApplication.class, args);
 	}
-
+	
 }

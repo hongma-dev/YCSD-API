@@ -12,4 +12,6 @@ public interface FoodMenuService {
 	Optional<FoodMenu> findFoodMenu ( Long menuId );
 	
 	void saveFoodMenu ( FoodMenu foodMenu );
+	
+	void deleteFoodMenu ( FoodMenu foodMenu );
 }

@@ -33,5 +33,10 @@ public class FoodMenuServiceImpl implements FoodMenuService{
 		foodMenuRepository.save(foodMenu);
 	}
 
+	@Override
+	public void deleteFoodMenu(FoodMenu foodMenu) {
+		foodMenuRepository.delete(foodMenu);
+	}
+
 	
 }
